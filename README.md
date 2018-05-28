@@ -16,3 +16,12 @@ Using Akka remoting and Akka clustering, we can achieve high availability and re
 git checkout -b akka_remoting_warmup master
 ````
 - Update the .conf file application.conf in src/main/resources to indicate remoting.
+
+<br><br>
+- Branch out to explore describing remote actors on different nodes
+````
+git checkout -b remote_actors_different_nodes akka_remoting_warmup 
+````
+- Create a .conf file application-1.conf in src/main/resources to indicate remote actor on different node
+- Create a .conf file application-2.conf in src/main/resources to indicate remote actor on different node
+- Create and define an simple actor: <b>com.github.janikibichi.learnakka.remoting.SimpleActor.scala</b>
