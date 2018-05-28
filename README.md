@@ -15,3 +15,4 @@ Using Akka remoting and Akka clustering, we can achieve high availability and re
 ````
 git checkout -b akka_remoting_warmup master
 ````
+- Update the .conf file application.conf in src/main/resources to indicate remoting.
