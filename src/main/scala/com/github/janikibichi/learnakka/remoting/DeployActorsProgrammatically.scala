@@ -17,7 +17,8 @@ object DeployRemoteActor2 extends App {
 
   val address = Address("akka.tcp", "DeployRemoteActor1", "127.0.0.1", 2552)
 
-  //Create and define an Actor in the ActorSystem
+  //Create and define an Actor in the ActorSystem and deploy it with the with deploy method specifying the address
+  //Props object provides the contract to create an actor
   val actor = actorSystem.actorOf(Props[SimpleActor].withDeploy(Deploy(scope = RemoteScope(address))), "remoteActor")
 
   actor ! "Checking"

@@ -1,0 +1,5 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/graham/code/learnAkka/remoting/src/main/resources/application-1.conf,/home/graham/code/learnAkka/remoting/target/scala-2.11/classes/application-1.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/graham/code/learnAkka/remoting/src/main/resources/application-3.conf,/home/graham/code/learnAkka/remoting/target/scala-2.11/classes/application-3.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/graham/code/learnAkka/remoting/src/main/resources/application-2.conf,/home/graham/code/learnAkka/remoting/target/scala-2.11/classes/application-2.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/graham/code/learnAkka/remoting/src/main/resources/application.conf,/home/graham/code/learnAkka/remoting/target/scala-2.11/classes/application.conf)[0m

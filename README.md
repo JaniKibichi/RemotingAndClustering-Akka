@@ -70,4 +70,25 @@ sbt -Dconfig.resource=application-2.conf "runMain com.github.janikibichi.learnak
 - See the remote actors interacting: [Actor 1](https://asciinema.org/a/HUdX2Z6kIdw2OKdXrIvTAIq1T) 
 and [Actor 2](https://asciinema.org/a/LP6ZyrpG7QAWolRWa78haxoTl).
 
+<br><br>
+- Branch out to explore scaling out the app with remote actors
+````
+git checkout -b deploy_app_to_remote_actors deploy_actors_programmatically
+````
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.MasterActor.scala</b>
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.WorkerActor.scala</b>
+- Create a .conf file application-3.conf in src/main/resources
+- Create the scaling out application: <b>com.github.janikibichi.learnakka.remoting.ScalingOutApp.scala</b>
+- Run the first App by passing the application-1.conf configuration:
+````
+sbt -Dconfig.resource=application-1.conf "runMain com.github.janikibichi.learnakka.remoting.ScalingOutMaster"
+````
+- Run the second App by passing the application-2.conf configuration:
+````
+sbt -Dconfig.resource=application-2.conf "runMain com.github.janikibichi.learnakka.remoting.ScalingOutWorker"
+````
+- Run the first App by passing the application-3.conf configuration:
+````
+sbt -Dconfig.resource=application-3.conf "runMain com.github.janikibichi.learnakka.remoting.ScalingOutWorker"
+````
 
