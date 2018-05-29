@@ -53,3 +53,21 @@ sbt -Dconfig.resource=application-1.conf "runMain com.github.janikibichi.learnak
 - See the remote actors interacting: [Actor 1](https://asciinema.org/a/A4CAYNbOLYWyOYZgSxz1RpnkX) 
 and [Actor 2.](https://asciinema.org/a/oIPCnTJa825EQCWWeH5Lnr3np)
 
+<br><br>
+- Branch out to deploy remote actors programmatically
+````
+git checkout -b deploy_actors_programmatically remote_actors_different_machines
+````
+- Create the file:<b>com.github.janikibichi.learnakka.remoting.DeployActorsProgrammatically.scala</b>
+- Run the app by passing the application-1.conf file:
+````
+sbt -Dconfig.resource=application-1.conf "runMain com.github.janikibichi.learnakka.remoting.DeployRemoteActor1"
+````
+- Run the second app by passing the application-2.conf file in a second terminal:
+````
+sbt -Dconfig.resource=application-2.conf "runMain com.github.janikibichi.learnakka.remoting.DeployRemoteActor2"
+````
+- See the remote actors interacting: [Actor 1](https://asciinema.org/a/HUdX2Z6kIdw2OKdXrIvTAIq1T) 
+and [Actor 2](https://asciinema.org/a/LP6ZyrpG7QAWolRWa78haxoTl).
+
+
