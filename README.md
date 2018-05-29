@@ -50,4 +50,6 @@ sbt -Dconfig.resource=application-2.conf "runMain com.github.janikibichi.learnak
 ````
 sbt -Dconfig.resource=application-1.conf "runMain com.github.janikibichi.learnakka.remoting.LookUpActorSelection"
 ````
+- See the remote actors interacting: [Actor 1](https://asciinema.org/a/A4CAYNbOLYWyOYZgSxz1RpnkX) 
+and [Actor 2.](https://asciinema.org/a/oIPCnTJa825EQCWWeH5Lnr3np)
 
