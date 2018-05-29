@@ -25,3 +25,14 @@ git checkout -b remote_actors_different_nodes akka_remoting_warmup
 - Create a .conf file application-1.conf in src/main/resources to indicate remote actor on different node
 - Create a .conf file application-2.conf in src/main/resources to indicate remote actor on different node
 - Create and define an simple actor: <b>com.github.janikibichi.learnakka.remoting.SimpleActor.scala</b>
+- Create and define an remote app with actor: <b>com.github.janikibichi.learnakka.remoting.RemoteApp.scala</b>
+- Run the app by passing the first config file:
+````
+sbt -Dconfig.resource=application-1.conf "runMain com.github.janikibichi.learnakka.remoting.HelloAkkaRemote1"
+````
+- Run the app by passing the second config file:
+````
+sbt -Dconfig.resource=application-2.conf "runMain com.github.janikibichi.learnakka.remoting.HelloAkkaRemote2"
+````
+- See the [Akka Remoting App.](https://asciinema.org/a/tlvIp1MqAQZgykHOOzv6aXsbO)
+
