@@ -36,3 +36,18 @@ sbt -Dconfig.resource=application-2.conf "runMain com.github.janikibichi.learnak
 ````
 - See the [Akka Remoting App.](https://asciinema.org/a/tlvIp1MqAQZgykHOOzv6aXsbO)
 
+<br><br>
+- Branch out to explore remote actors from different machines
+````
+git checkout -b remote_actors_different_machines remote_actors_different_nodes
+````
+- Create the file:<b>com.github.janikibichi.learnakka.remoting.LookingUpRemoteApps.scala</b>
+- Run the app by passing the second config file:
+````
+sbt -Dconfig.resource=application-2.conf "runMain com.github.janikibichi.learnakka.remoting.LookingUpRemoteActors"
+````
+- Run the second app in a different terminal by passing the first config file:
+````
+sbt -Dconfig.resource=application-1.conf "runMain com.github.janikibichi.learnakka.remoting.LookUpActorSelection"
+````
+
