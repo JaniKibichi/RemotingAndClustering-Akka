@@ -95,3 +95,27 @@ sbt -Dconfig.resource=application-3.conf "runMain com.github.janikibichi.learnak
 [Worker Actor 1](https://asciinema.org/a/whnfDa8KPPBgOShtsV0TW4vGO) and 
 [Worker Actor 2](https://asciinema.org/a/IVfVleLoiiWlIX6Dxo8O5sRxC) in action.
 
+<br><br>
+- Branch out to explore deploying a chat app to remote actors
+````
+git checkout -b deploy_chat_app_to_actors deploy_app_to_remote_actors
+````
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.ChatServer.scala</b>
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.ChatClient.scala</b>
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.ChatApplication.scala</b>
+
+- Run the Chat Server by passing the application-1.conf configuration:
+````
+sbt -Dconfig.resource=application-1.conf "runMain com.github.janikibichi.learnakka.remoting.ChatServerApplication"
+````
+- Run the ChatClient1 by passing the application-2.conf configuration:
+````
+sbt -Dconfig.resource=application-2.conf "runMain com.github.janikibichi.learnakka.remoting.ChatClientApplication"
+````
+- Run the ChatClient2 by passing the application-3.conf configuration:
+````
+sbt -Dconfig.resource=application-3.conf "runMain com.github.janikibichi.learnakka.remoting.ChatClientApplication"
+````
+- See the [chat server](https://asciinema.org/a/aAbTcIHvn3HqItkPqbzfhcRn0) and
+ [chat app 1](https://asciinema.org/a/0tUlPQo65ysWQ9Fv8703WRYTY) and
+  [chat app 2.](https://asciinema.org/a/SDFEUZ1IbqkDDVuYP4YUTIf46)
