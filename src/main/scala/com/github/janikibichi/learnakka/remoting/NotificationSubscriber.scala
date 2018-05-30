@@ -8,19 +8,20 @@ import akka.cluster.pubsub.DistributedPubSubMediator.{Subscribe, SubscribeAck}
 case class Notification(title: String, body: String)
 
 class NotificationSubscriber extends Actor {
-  //Create mediator
+  //Access mediator
   val mediator = DistributedPubSub(context.system).mediator
 
-  //Send message
+  //Send message to mediator to subscribe
   mediator ! Subscribe("notification", self)
 
-  //Create cluster
+  //Access cluster
   val cluster = Cluster(context.system)
 
-  //Get cluster Address
+  //Access cluster Address
   val clusterAddress = cluster.selfUniqueAddress
 
   def receive = {
+    //Receive notification from publisher through mediator
     case notification: Notification =>
       println(s"Got notification in node $clusterAddress => $notification")
 
