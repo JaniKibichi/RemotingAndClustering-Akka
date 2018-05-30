@@ -4,7 +4,7 @@
 		module="remoting-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20180530085047"
+		publication="20180530130954"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

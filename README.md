@@ -131,8 +131,30 @@ libraryDependencies += "com.typesafe.akka" %% "akka-cluster" % "2.5.12"
 ````
 - Create a .conf file application-cluster.conf in src/main/resources
 
-
-
+<br><br>
+- Branch to explore publish-subscribe in the cluster
+````
+git checkout -b publish_subscribe_cluster run_akka-clustering
+````
+- Add the required dependency for Akka cluster tools.
+````
+libraryDependencies += "com.typesafe.akka" %% "akka-cluster-tools" % "2.5.12"
+````
+- Create the file application-cluster-1.conf in src/main/resources
+- Create the file application-cluster-2.conf in src/main/resources
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.NotificationPublisher.scala</b>
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.NotificationSubscriber.scala</b>
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.DistributedPubSubApplication.scala</b>
+- Run the DistributedPubSubApp and pass application-cluster-1.conf
+````
+sbt -Dconfig.resource=application-cluster-1.conf "runMain com.github.janikibichi.learnakka.remoting.DistributedPubSubApplication"
+````
+- Run the DistributedPubSubApp and pass application-cluster-2.conf
+````
+sbt -Dconfig.resource=application-cluster-2.conf "runMain com.github.janikibichi.learnakka.remoting.DistributedPubSubApplication"
+````
+- Run the PubSub [App One](https://asciinema.org/a/jqt4IgRW9AFczMork6ZElX47V) 
+and [App Two.](https://asciinema.org/a/jqt4IgRW9AFczMork6ZElX47V)
 
 
 
