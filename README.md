@@ -156,13 +156,6 @@ sbt -Dconfig.resource=application-cluster-2.conf "runMain com.github.janikibichi
 - Run the PubSub [App One](https://asciinema.org/a/jqt4IgRW9AFczMork6ZElX47V) 
 and [App Two.](https://asciinema.org/a/jqt4IgRW9AFczMork6ZElX47V)
 
-<br><br>
-- Branch out to explore cluster sharding
-````
-git checkout -b cluster_sharding publish_subscribe_cluster
-````
-
-
 
 
 
