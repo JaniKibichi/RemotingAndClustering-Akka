@@ -9,6 +9,7 @@ object ChatClientInterface {
   def props(chatClient: ActorRef) = Props(new ChatClientInterface(chatClient))
 }
 
+//Start the Chat and Send all Messages to connected Chat Clients
 class ChatClientInterface(chatClient: ActorRef) extends Actor {
   import ChatClientInterface._
 

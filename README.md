@@ -119,3 +119,45 @@ sbt -Dconfig.resource=application-3.conf "runMain com.github.janikibichi.learnak
 - See the [chat server](https://asciinema.org/a/aAbTcIHvn3HqItkPqbzfhcRn0) and
  [chat app 1](https://asciinema.org/a/0tUlPQo65ysWQ9Fv8703WRYTY) and
   [chat app 2.](https://asciinema.org/a/SDFEUZ1IbqkDDVuYP4YUTIf46)
+
+<br><br>
+- Branch to explore Akka clustering
+````
+git checkout -b run_akka-clustering deploy_chat_app_to_actors 
+````
+-Add the Akka-cluster dependency in build.sbt
+````
+libraryDependencies += "com.typesafe.akka" %% "akka-cluster" % "2.5.12"
+````
+- Create a .conf file application-cluster.conf in src/main/resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
