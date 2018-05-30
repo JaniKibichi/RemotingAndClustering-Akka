@@ -91,4 +91,7 @@ sbt -Dconfig.resource=application-2.conf "runMain com.github.janikibichi.learnak
 ````
 sbt -Dconfig.resource=application-3.conf "runMain com.github.janikibichi.learnakka.remoting.ScalingOutWorker"
 ````
+- See the [Master Actor](https://asciinema.org/a/ftBjjuN8YQz024bmWW5CaAxPa), 
+[Worker Actor 1](https://asciinema.org/a/whnfDa8KPPBgOShtsV0TW4vGO) and 
+[Worker Actor 2](https://asciinema.org/a/IVfVleLoiiWlIX6Dxo8O5sRxC) in action.
 
