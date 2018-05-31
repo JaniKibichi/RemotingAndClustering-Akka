@@ -21,7 +21,7 @@ object ClusterShardingApp extends App {
   )
 
   //Let's simulate some time has passed. Never use Thread.sleep in production
-    Thread.sleep(3000)
+    Thread.sleep(30000)
 
   val locations = Vector(Location("USA", "Chicago"),Location("ESP","Madrid"), Location("FIN","Helsinki"))
 

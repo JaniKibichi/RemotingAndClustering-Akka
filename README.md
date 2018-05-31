@@ -173,6 +173,18 @@ libraryDependencies += "com.typesafe.akka" %% "akka-distributed-data" % "2.5.12"
 - Create the file: <b>com.github.janikibichi.learnakka.remoting.ClusterShardingApp.scala</b>
 - Create the file: <b>com.github.janikibichi.learnakka.remoting.TemperatureActor.scala</b>
 
+- Run the first cluster sharding app:
+````
+sbt -Dconfig.resource=application-cluster-sharding-1.conf "runMain com.github.janikibichi.learnakka.remoting.ClusterShardingApp"
+````
+
+- Run the first cluster sharding app:
+````
+sbt -Dconfig.resource=application-cluster-sharding-2.conf "runMain com.github.janikibichi.learnakka.remoting.ClusterShardingApp"
+````
+- Run the Cluster Sharding [App One](https://asciinema.org/a/KJ6mJyH8j9o99nldFFRUZ4JTy) 
+and [App Two](https://asciinema.org/a/bNBNh6TgPPTmow75vsInJc7s7)
+
 
 
 
