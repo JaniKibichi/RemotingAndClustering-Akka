@@ -156,7 +156,19 @@ sbt -Dconfig.resource=application-cluster-2.conf "runMain com.github.janikibichi
 - Run the PubSub [App One](https://asciinema.org/a/jqt4IgRW9AFczMork6ZElX47V) 
 and [App Two.](https://asciinema.org/a/jqt4IgRW9AFczMork6ZElX47V)
 
+<br><br>
+- Branch out to explore cluster sharding
+````
+git checkout -b cluster_sharding publish_subscribe_cluster
+````
+- Add cluster sharding and distributed data dependencies 
+````
+libraryDependencies += "com.typesafe.akka" %% "akka-cluster-sharding" % "2.5.12"
+libraryDependencies += "com.typesafe.akka" %% "akka-distributed-data" % "2.5.12"
 
+````
+- Create the file application-cluster-sharding-1.conf in src/main/resources
+- Create the file application-cluster-sharding-2.conf in src/main/resources
 
 
 
