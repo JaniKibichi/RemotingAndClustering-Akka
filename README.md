@@ -170,6 +170,9 @@ libraryDependencies += "com.typesafe.akka" %% "akka-distributed-data" % "2.5.12"
 - Create the file application-cluster-sharding-1.conf in src/main/resources
 - Create the file application-cluster-sharding-2.conf in src/main/resources
 
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.ClusterShardingApp.scala</b>
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.TemperatureActor.scala</b>
+
 
 
 

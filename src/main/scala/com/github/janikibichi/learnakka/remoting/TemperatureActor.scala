@@ -12,6 +12,7 @@ object TemperatureActor{
   }
   case class UpdateTemperature(location: Location, currentTemp: Double)
   case class GetCurrentTemperature(location: Location)
+
   val extractEntityId: ShardRegion.ExtractEntityId = {
     case msg@UpdateTemperature(location, _) =>
       (s"$location", msg)
@@ -21,6 +22,7 @@ object TemperatureActor{
   }
 
   val numberOfShards = 100
+
   val extractShardId: ShardRegion.ExtractShardId = {
     case UpdateTemperature(location, _) =>
       (s"$location".hashCode % numberOfShards).toString
