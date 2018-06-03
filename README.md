@@ -185,6 +185,21 @@ sbt -Dconfig.resource=application-cluster-sharding-2.conf "runMain com.github.ja
 - Run the Cluster Sharding [App One](https://asciinema.org/a/KJ6mJyH8j9o99nldFFRUZ4JTy) 
 and [App Two](https://asciinema.org/a/bNBNh6TgPPTmow75vsInJc7s7)
 
+<br><br>
+- Branch out to explore sharing data between akka clusters
+````
+git checkout -b data_sharing_between_akka_clusters cluster_sharding 
+````
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.SubscriptionManager.scala</b>
+- Create the file: <b>com.github.janikibichi.learnakka.remoting.DistributedDataApp.scala</b>
+- Run the first distributed app [data application]
+````
+sbt -Dconfig.resource=application-cluster-1.conf "runMain com.github.janikibichi.learnakka.remoting.DistributedDataApp"
+````
+- Run the second distributed app [data application]
+````
+sbt -Dconfig.resource=application-cluster-2.conf "runMain com.github.janikibichi.learnakka.remoting.DistributedDataApp"
+````
 
 
 
