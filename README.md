@@ -200,11 +200,24 @@ sbt -Dconfig.resource=application-cluster-1.conf "runMain com.github.janikibichi
 ````
 sbt -Dconfig.resource=application-cluster-2.conf "runMain com.github.janikibichi.learnakka.remoting.DistributedDataApp"
 ````
+<br><br>
+- Branch out to explore creating singleton actor across akka clusters
+````
+git checkout -b singleton_actor_across_clusters data_sharing_between_akka_clusters
+````
+- Add Akka-cluster-tools to build.sbt file:
+````
+libraryDependencies += "com.typesafe.akka" %% "akka-cluster-tools" % "2.5.12"
+````
+- Create the .conf called application-cluster-autodown-1.conf in the src/main/resources
+- Create the .conf called application-cluster-autodown-2.conf in the src/main/resources
+- Create a file, ClusterAwareSimpleActor.scala
+- Create a file, ClusterSingletonApp.scala
+- Run the app using : 
+sbt -Dconfig.resource=application-cluster-autodown-1.conf "runMain com.github.janikibichi.learnakka.remoting.ClusterSingletonApp"
+sbt -Dconfig.resource=application-cluster-autodown-2.conf "runMain com.github.janikibichi.learnakka.remoting.ClusterSingletonApp"
 
-
-
-
-
+- See the [app and cluster.]
 
 
 
