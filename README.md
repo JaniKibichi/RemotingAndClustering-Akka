@@ -217,9 +217,7 @@ libraryDependencies += "com.typesafe.akka" %% "akka-cluster-tools" % "2.5.12"
 sbt -Dconfig.resource=application-cluster-autodown-1.conf "runMain com.github.janikibichi.learnakka.remoting.ClusterSingletonApp"
 sbt -Dconfig.resource=application-cluster-autodown-2.conf "runMain com.github.janikibichi.learnakka.remoting.ClusterSingletonApp"
 
-- See the [app and cluster.]
-
-
+- See the [app](https://asciinema.org/a/w8mwWcYBHCp18QzG6yVO99QTf) and [cluster.](https://asciinema.org/a/W5EeTqiCCj1v9ZfYEFDWnWR49)
 
 
 
