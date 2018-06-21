@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RemotingAndClustering-Akka.iml" filepath="$PROJECT_DIR$/.idea/modules/RemotingAndClustering-Akka.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/remoting-build.iml" filepath="$PROJECT_DIR$/.idea/modules/remoting-build.iml" />
-    </modules>
-  </component>
-</project>
